@@ -1,0 +1,19 @@
+{
+	"name": "node_deploy",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"install-server": "npm install --prefix server",
+		"install-client": "npm install --prefix client",
+		"install": "npm run install-server && npm run install-client",
+		"watch-server": "npm run watch --prefix server",
+		"watch-client": "npm run dev --prefix client",
+		"watch": "npm run watch-server & npm run watch-client",
+		"deploy": "npm run build --prefix client && npm run start --prefix server",
+		"deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server"
+	},
+	"author": "",
+	"license": "ISC"
+}
