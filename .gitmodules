@@ -1,0 +1,6 @@
+[submodule "server"]
+  path = server
+  url = https://github.com/ikun2019/node_deploy_gitactions_server.git
+[submodule "client"]
+  path = client
+  url = https://github.com/ikun2019/node_deploy_gitactions_client.git
