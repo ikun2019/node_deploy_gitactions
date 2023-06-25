@@ -14,10 +14,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16.16'
-      - name: Npm Install(Client)
+      - name: Npm Install
         run: npm install
-        working-directory: ./client
-      - name: Npm Install(Server)
-        run: npm install
-        working-directory: ./server
+        working-directory: ./
+      # - name: Npm Install(Server)
+      #   run: npm install
+      #   working-directory: ./server
       - run: npm run build --prefix client
