@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: '16.16'
       - name: Npm Install
-        run: npm install
+        run: npm ci
         working-directory: ./
       # - name: Npm Install(Server)
       #   run: npm install
