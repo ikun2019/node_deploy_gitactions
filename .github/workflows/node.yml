@@ -22,11 +22,11 @@ jobs:
 
       - name: Install dependencies (Client)
         run: npm install --prefix client
-        working-directory: ./client
+        working-directory: client
 
       - name: Install dependencies (Server)
         run: npm install --prefix server
-        working-directory: ./server
+        working-directory: server
 
       - name: Build (Client)
         run: npm run build --prefix client
