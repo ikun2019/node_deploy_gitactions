@@ -24,18 +24,17 @@ jobs:
           npm -v
       - name: Install dependencies
         run: |
+          cd ./server
           pwd
           npm install
-
+          cd ../
+          cd ./client
+          pwd
+          npm install
       - name: Build
         run: |
           pwd
           npm run build
-
-      - name: Install server dependencies
-        run: |
-          pwd
-          npm install
 
       - name: Start server
         run: npm start
