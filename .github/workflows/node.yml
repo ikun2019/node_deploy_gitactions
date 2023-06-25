@@ -21,6 +21,7 @@ jobs:
       - name: versions
         run: |
           pwd
+          ls
           node -v
           npm -v
       - name: Install dependencies
