@@ -21,7 +21,11 @@ jobs:
           node-version: '16'
 
       - name: Install dependencies
-        run: npm run install
+        run: |
+          cd client
+          npm install
+          cd ../server
+          npm install
 
       - name: Start server
         run: npm run deploy-cluster
