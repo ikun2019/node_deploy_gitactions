@@ -24,7 +24,6 @@ jobs:
         run: |
           cd ./client
           ls
-          npm install --prefix client
 
       - name: Install dependencies (Server)
         run: npm install --prefix server
