@@ -17,6 +17,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '16.16.0'
+
       - name: versions
         run: |
           pwd
@@ -24,11 +25,6 @@ jobs:
           npm -v
       - name: Install dependencies
         run: |
-          cd ./server
-          pwd
-          npm install
-          cd ../
-          cd ./client
           pwd
           npm install
       - name: Build
@@ -37,4 +33,4 @@ jobs:
           npm run build
 
       - name: Start server
-        run: npm start
+        run: npm run deploy-cluster
