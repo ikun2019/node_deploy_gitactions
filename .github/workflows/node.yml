@@ -19,7 +19,7 @@ jobs:
           node-version: '16'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
         working-directory: ./client
 
       - name: Build
@@ -27,7 +27,7 @@ jobs:
         working-directory: ./client
 
       - name: Install server dependencies
-        run: npm ci
+        run: npm install
         working-directory: ./server
 
       - name: Start server
