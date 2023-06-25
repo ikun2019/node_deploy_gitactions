@@ -18,23 +18,23 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Current Dir
-        run: pwd
-
       - name: Install dependencies
-        run: npm install
+        run: |
+          pwd
+          npm install
         working-directory: ./client
 
       - name: Build
-        run: npm run build
+        run: |
+          pwd
+          npm run build
         working-directory: ./client
 
       - name: Install server dependencies
-        run: npm install
+        run: |
+          pwd
+          npm install
         working-directory: ./server
-
-      - name: Move to server directory
-        run: cd server
 
       - name: Start server
         run: npm start
