@@ -20,7 +20,7 @@ jobs:
 
       - name: Install Client Dependencies
         working-directory: ./client
-        run: npm install
+        run: npm install --prefix client
 
       - name: Build Client
         working-directory: ./client
@@ -41,7 +41,7 @@ jobs:
 
       - name: Install Server Dependencies
         working-directory: ./server
-        run: npm install
+        run: npm install --prefix server
 
       - name: Start Server
         working-directory: ./server
