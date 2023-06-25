@@ -11,7 +11,7 @@
 		"watch-server": "npm run watch --prefix server",
 		"watch-client": "npm run dev --prefix client",
 		"watch": "npm run watch-server & npm run watch-client",
-		"deploy": "npm run build --prefix client && npm run start --prefix server",
+		"deploy": "npm run build --prefix client && npm start --prefix server",
 		"deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server & npm run start --prefix client"
 	},
 	"author": "",
