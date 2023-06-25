@@ -1,9 +1,11 @@
 name: NASA Project CI
+
 on:
   push:
     branches: [master]
   pull_request:
     branches: [master]
+
 jobs:
   build:
     name: Install and Build Client
@@ -16,29 +18,20 @@ jobs:
       - name: Use Node.js version 16
         uses: actions/setup-node@v2
         with:
-          node-version: '16.16.0'
-          cache: 'npm'
-      - name: versions
-        run: |
-          pwd
-          ls
-          node -v
-          npm -v
-      - name: Npm Install Server
-        run: |
-          cd ./server
-          pwd
-          npm i
-          cd ../
-      - name: Npm Install Client
-        run: |
-          cd ./client
-          pwd
-          npm i
-      - name: Build
-        run: |
-          pwd
-          npm run build
+          node-version: '16'
+
+      - name: Install dependencies (Client)
+        run: npm install
+        working-directory: ./client
+
+      - name: Build (Client)
+        run: npm run build
+        working-directory: ./client
+
+      - name: Install dependencies (Server)
+        run: npm install
+        working-directory: ./server
 
       - name: Start server
-        run: npm run deploy-cluster
+        run: npm start
+        working-directory: ./server
