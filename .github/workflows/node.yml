@@ -24,10 +24,17 @@ jobs:
           ls
           node -v
           npm -v
-      - name: Install dependencies
+      - name: Npm Install Server
         run: |
+          cd ./server
           pwd
-          npm run ci
+          npm i
+          cd ../
+      - name: Npm Install Client
+        run: |
+          cd ./client
+          pwd
+          npm i
       - name: Build
         run: |
           pwd
