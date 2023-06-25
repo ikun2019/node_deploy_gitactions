@@ -20,18 +20,8 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Install dependencies (Client)
-        run: |
-          cd client
-          npm install
-
-      - name: Install dependencies (Server)
-        run: |
-          cd server
-          npm install
-
-      - name: Build (Client)
-        run: npm run build --prefix ./client
+      - name: Install dependencies
+        run: npm run install
 
       - name: Start server
         run: npm run deploy-cluster
