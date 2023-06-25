@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: |
           pwd
-          npm install
+          npm ci
       - name: Build
         run: |
           pwd
