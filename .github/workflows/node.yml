@@ -13,6 +13,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - run: npm cache clean
+      - run: npm cache verify
       - run: npm run install
       - run: npm run build --prefix client
