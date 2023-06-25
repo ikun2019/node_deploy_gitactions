@@ -26,6 +26,3 @@ jobs:
           npm install
           cd ../server
           npm install
-
-      - name: Start server
-        run: npm run deploy-cluster
