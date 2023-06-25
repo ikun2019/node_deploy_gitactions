@@ -8,11 +8,16 @@ jobs:
   buld:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        # with:
-        #   persist-credentials: false
+      - name: Install checkout
+        uses: actions/checkout@v3
       - name: Use Node.js version 16
         uses: actions/setup-node@v3
         with:
           node-version: '16.16'
+      - name: Npm Install(Client)
+        run: npm install
+        working-directory: ./client
+      - name: Npm Install(Server)
+        run: npm install
+        working-directory: ./server
       - run: npm run build --prefix client
