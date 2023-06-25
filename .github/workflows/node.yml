@@ -21,15 +21,13 @@ jobs:
           node-version: '16'
 
       - name: Install dependencies (Client)
-        run: npm install --prefix client
-        working-directory: client
+        run: npm install --prefix ./client
 
       - name: Install dependencies (Server)
-        run: npm install --prefix server
-        working-directory: server
+        run: npm install --prefix ./server
 
       - name: Build (Client)
-        run: npm run build --prefix client
+        run: npm run build --prefix ./client
 
       - name: Start server
         run: npm run deploy-cluster
