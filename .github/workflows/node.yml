@@ -15,6 +15,5 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16.16'
-      - run: npm init -y
-      - run: npm run install
+      - run: npm ci
       - run: npm run build --prefix client
