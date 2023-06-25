@@ -21,7 +21,7 @@ jobs:
           node-version: '16'
 
       - name: Install dependencies (Client)
-        run: npm install
+        run: npm install --prefix client
         working-directory: ./client
 
       - name: Install dependencies (Server)
