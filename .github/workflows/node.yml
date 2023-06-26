@@ -29,4 +29,4 @@ jobs:
       - name: Build Client
         run: |
           cd client
-          nuxt build
+          npm run build
