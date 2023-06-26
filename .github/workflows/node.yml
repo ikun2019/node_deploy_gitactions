@@ -26,8 +26,9 @@ jobs:
           npm install
           cd ../server
           npm install
+
       - name: Build Client
         run: |
-          pwd
           cd client
+          pwd
           npm run build
