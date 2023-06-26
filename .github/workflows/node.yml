@@ -29,6 +29,4 @@ jobs:
 
       - name: Build Client
         run: |
-          cd client
-          ls
-          npm build
+          npm run deploy-cluster
