@@ -31,4 +31,4 @@ jobs:
         run: |
           cd client
           ls
-          npm run build
+          npm build
