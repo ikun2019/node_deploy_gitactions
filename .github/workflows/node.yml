@@ -18,11 +18,15 @@ jobs:
       - name: Use Node.js version 16
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: '16.16.0'
 
-      - name: Install dependencies
+      - name: Npm Install
         run: |
           cd client
           npm install
           cd ../server
           npm install
+      - name: Build Client
+        run: |
+          cd ../client
+          nuxt build
