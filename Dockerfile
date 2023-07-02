@@ -20,6 +20,8 @@ RUN npm run build --prefix client
 # server内のファイルをdockerにコピー
 COPY server/ server/
 
+# ディレクトリの権限を変更
+RUN chown -R node:node /app
 USER node
 
 # serverの起動
